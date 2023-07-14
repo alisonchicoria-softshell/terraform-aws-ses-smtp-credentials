@@ -17,7 +17,7 @@ resource "aws_iam_policy" "send_mail" {
 data "aws_iam_policy_document" "send_mail" {
   statement {
     actions   = ["ses:SendRawEmail"]
-    resources = [local.ses_identity_arn]
+    resources = ["*"]
   }
 }
 
